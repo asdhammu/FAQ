@@ -1,201 +1,201 @@
 [	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do I buy a digital currency?",
+	"ans": "Go to the Buys page Select the type of digital currency you'd like to buy Enter the amount you'd like to buy denominated in either digital currency or your local currency Select the wallet you wish to have your funds deposited into Select your desired payment method Confirm the order is correct and click Buy."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do I sell my digital currency?",
+	"ans":"For supported countries and payment methods, you can sell or your bitcoin or other digital currency for your local currency and have the proceeds deposited in your linked bank account or local currency wallet Go to the Sells page Enter the amount that you wish to sell Select the wallet you wish to sell from (for example your BTC Wallet) Select the account you wish to deposit to (such as your linked bank account) Confirm the order is correct and click Sell."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How long does a transaction take to complete?",
+	"ans":"Coinbase generally makes your funds available in your account as soon as we receive payment. Since Coinbase partners with various payment service providers in different geographic regions, the timing will vary according to your location and payment method used."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What countries are buys and sells available in?",
+	"ans":"Digital currency conversion services are currently available to customers in Australia*, Canada*, Singapore, the United States, the United Kingdom, and the following European countriesAustria Belgium Bulgaria Croatia Cyprus Czech Republic Denmark Finland Greece Hungary Ireland Italy Latvia Liechtenstein Malta Monaco Netherlands Norway Poland Portugal San Marino Slovakia Slovenia Spain Sweden Switzerland"
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How are fees applied when I buy digital currency?",
+	"ans":"Buying Digital Currency Fees are added to the amount entered to arrive at the total for the order For example, if you enter $100 USD as the amount of BTC to buy, and the fee is 1.49%, your total will be $101.49 That total will be charged to your payment method and you will receive $100 worth of BTC."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How are fees applied when I sell digital currency?",
+	"ans":"Coinbase fees are subtracted from the amount entered to arrive at the total. For example, if you enter $100 USD as the amount of BTC to sell, and the fee is 1.49%, your total will be $98.51. $100 Worth of BTC will be removed from your Coinbase account and $98.51 will be credited to the selected payment method The total amount of the transaction denominated in both the digital currency and your local currency, as well as the fees being charged, will always be displayed to you on the confirmation screen."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What price will I receive when I buy or sell digital currency?",
+	"ans":"When you click Buy or Sell, the price you receive is locked in at that moment, regardless of market fluctuations between executing the buy or sell and receiving the digital currency. The price can be volatile - by locking in the price you always know exactly what you paid for your digital currency. You can find the price you bought or sold at on your history page."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How can I create a recurring transaction?",
+	"ans":"The recurring transaction feature allows you to schedule future purchases, sells, requests, or transfers with just a few clicks. To get started, navigate to the Recurring Transactions page and click the 'New Recurring Transaction' button near the top right.Once you have selected your desired action, you can use the accompanying form to set the account, payment method, amount, and frequency you wish to utilize for future transactions. "
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Why do I have negative balance?",
+	"ans":"A negative balance occurs when you have withdrawn more funds than you have successfully paid for. Sometimes bank transfers are reversed after funds from a purchase has already been deposited into your account. If at the time of the reversal you have already sent the funds you purchased to an external wallet this creates a negative balance in your account. "
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Why are buys and deposits disabled on my account?",
+	"ans":"There could be two possible reasons: 1. If we have received a chargeback when attempting to process one of your trades, it may be preventing us from completing further orders.  If you are aware of any chargebacks or reversals that have occurred on a recent trade, please include this information when contacting us. 2. In other cases, we may just need some additional information to confirm your ownership of the payment methods added to your account.  If you have not done so already, please make sure there is an ID document uploaded at https://www.coinbase.com/verifications/documents/new for each person who has information verified on your Coinbase account.  This will help expedite our review process."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Was my GBP converted to EUR when I made a withdrawal?",
+	"ans":"At this time Coinbase does not support bank deposits or withdrawals of British pound sterling (GBP). In order to withdraw GBP, Coinbase will convert funds to Euros (EUR) and send them to your linked SEPA-compatible bank account."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Can I cancel my purchase?",
+	"ans":"All confirmed buys, sells, deposits, and withdrawals on Coinbase are final. Before any order is processed, you will always receive a \"Confirmation\" prompt to make sure you are comfortable with the amount and timing of your order. Be sure to only click \"Confirm\" once you are sure you want the order to be processed as described in the confirmation window."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How much currency can I purchase?",
+	"ans":"The buy limit listed on the verifications page is a total maximum for all available funding methods. You may have noticed that individual funding method limits are different from the buy level limitations listed on the verifications page. The buy limit available for each funding source is visible on the buy page when you select that funding source. Coinbase may have separate limits for the different account funding sources listed below. * Bank transfers (ACH, SEPA, Bank wire, xfers) * Instant purchases via bank transfers, enabled by account history and a backup credit card (available to select users in the US only) * Currency Wallet stored value (USD, CAD, EUR, GBP, etc) * Instant buys (credit card/debit card, where available). You can add funding sources on the payment methods page. You can also fund your Coinbase account with a wire transfer (not available in all regions) for up to the buy limit listed on your verifications page, without linking a bank account to your Coinbase account."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What are my account limits?",
+	"ans":"For security, regulatory compliance, and fraud prevention, there are limits to how much digital currency can be bought and sold with your Coinbase account. These limits vary based on the payment method used, your account age, purchase history, and other factors."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":" How are account limits set for each linked account?",
+	"ans":"For security, regulatory compliance, and fraud prevention, there are limits to how much digital currency can be bought and sold with your Coinbase account. These limits vary based on the payment method used, your account age, purchase history, and other factors.* Each external account linked to your Coinbase account has a different limit. For example, the limits on a linked credit card are separate from a linked bank account. Limits for each linked account are calculated separately. To increase the limit for a specific linked account, be sure to use that account to buy and sell. *There is also an overall limit for your Coinbase account regardless of which payment method is used."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"When do my limits replenish?",
+	"ans":"Limits are refilled gradually over the course of one week from the time your order is confirmed. For example if you placed a buy order for the maximum amount, your limits would be 1/7th replenished each day and fully replenished after 1 week."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do I know my limits have changed?",
+	"ans":"Coinbase will automatically send you an email you when there is a change made to your limits."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Why was my purchase declined?",
+	"ans":"Bitcoin and ether transactions are not reversible, so for your safety and ours we use a risk algorithm to flag potentially fraudulent purchases. Unfortunately, sometimes it flags legitimate transactions too. The algorithm is always improving but is not perfect. On occasion it can incorrectly cancel a transaction even when it is not fraudulent. If you have transactions that have been inaccurately flagged, we genuinely apologize and we ask that you please take the following steps: 1. Complete the verification steps found here: https://www.coinbase.com/verifications 2. Verify your ID using our secure upload portal here: https://www.coinbase.com/verifications/documents 3. Contact us"
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":" How can I accept bitcoin payments safely when the price isn’t stable?",
+	"ans":"Rather than receiving payments into your Coinbase wallet, the funds will instead be sent to Coinbase directly and exchanged for your domestic currency at the moment of sale. You'll then receive a daily payout directly to your bank account for your orders."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Closing a coinbase account?",
+	"ans":"Coinbase may initiate closure of customer accounts. This can happen for a number of reasons including, but not limited to, engaging in prohibited activity as defined in our User Agreement. When this happens, buy/sell services are disabled and in addition you are no longer permitted to use your Coinbase account as a digital currency wallet. However, you are allowed to withdraw all funds from your Coinbase account and send it to any wallet address you choose, so access to digital currency is never “frozen” in this case. You are also allowed to clear any balances in a local currency wallet by withdrawing to a verified bank account before the account closure proceeds."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is instant exchange?",
+	"ans":"Instant Exchange allows you to send bitcoin and pay for it with your local currency from the same page. You can also receive bitcoin and Coinbase will execute an instant sell in the background. The sell will credit funds to your local currency wallet. Instant Exchange is a great tool for people who want to use bitcoin but prefer to cash out immediately to fiat currency. The fiat currency value of each conversion transaction, after Coinbase’s conversion fee, will be reflected in your USD, EUR, and/or GBP wallets. Instant Exchange is supported only for users who hold fiat currency wallets with Coinbase."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is Bitcoin Cash?",
+	"ans":"Bitcoin Cash (BCH) is a direct result of a Bitcoin fork that occurred on August 1, 2017. It is an alternative version of Bitcoin that makes use of new features and rules, and has a different development roadmap. For more information about Bitcoin Cash, please visit https://www.bitcoincash.org."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How can I trust that Coinbase knows the exact amount of Bitcoin Cash that was in my account at the time of the fork? ",
+	"ans":"At the time of the fork, we duplicated the current balance of all Coinbase customer accounts. Customers can download a copy of their transaction history to see a running log of their balance for each Bitcoin wallet."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"I sent my funds off of Coinbase before the fork. Will I still get my BCH?",
+	"ans":"No. If you sent Bitcoin off of Coinbase before the fork, you will not receive Bitcoin Cash from Coinbase. If you sent to another exchange and did not receive your BCH, please contact their support team."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Can I send BCH to Coinbase? ",
+	"ans":"You can send BCH to and from Coinbase the same way you send all other assets on the platform. You can select the “Deposit” button next to your BCH wallet to view your BCH deposit address. "
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What happens if I send Bitcoin Cash to a Bitcoin address?",
+	"ans":" Coinbase has already credited accounts who received any BCH at their existing BTC addresses. Going forward, we cannot guarantee that funds will be properly credited when one asset is sent to the address of a different asset. Please make sure that you only send funds to the specific deposit address displayed in your Coinbase account for the asset you are sending. You can view a list of these addresses, or create a new one, by visiting this page."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is Bitcoin?",
+	"ans":"Bitcoin is a new kind of money that can be sent from one person to another without the need for a trusted third party such as a bank or other financial institution; it is the first global, decentralized currency."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is the technology used?",
+	"ans":"Bitcoin is fundamentally software, anybody can run it on their computer, and therefore participate in a global economy. One of the most important elements of Bitcoin is the blockchain, which tracks who owns what, similar to how a bank tracks assets. What sets the Bitcoin blockchain apart from a bank's ledger is that it is distributed, meaning anyone can view it. Since Bitcoin is open, no company, country, or third party is in control of it, and anyone can participate."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is the bitcoin currency?",
+	"ans":"Bitcoin is global: Bitcoins can be sent to someone across the world as easily as one can pass cash across the counter. Bitcoin isn't closed on weekends and doesn't  impose any arbitrary limits Bitcoin fees are cheap: Bitcoin transaction fees are usually negligible. Currently, they range from half of a cent USD to 5 cents USD, for a bitcoin transaction of any size. This is significant to merchants, who are used to paying ~2-3% with credit cards (and passing these fees on to their customers), and great for everybody who is accustomed to paying $2 - $5 to withdraw cash from an ATM."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Is bitcoin secure?",
+	"ans":"Bitcoin is secure: Due to the cryptographic nature of the Bitcoin network, Bitcoin payments are fundamentally more secure than standard debit/credit card transactions. When making a Bitcoin payment, no sensitive information is required to be sent over the internet. There is very low risk of your financial information being compromised, or having your identity stolen."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is Ethereum?",
+	"ans":"Ethereum is a decentralized blockchain platform founded in 2014 by Vitalik Buterin. Like Bitcoin, Ethereum is an open-source project that is not owned or operated by a single individual. This means that anyone, anywhere can download the software and begin interacting with the network. Unlike the Bitcoin network, the primary purpose of Ethereum is not to act as a form of currency, but to allow those interacting with the Ethereum Network to make and operate 'smart contracts' without having to trust each other or use a middleman. Smart contracts are applications that run exactly as programmed without any possibility of downtime, censorship, fraud, or third party interference - a smart contract will work exactly the same every time it is used."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is Litecoin?",
+	"ans":"Litecoin is similar to Bitcoin, and in some ways a direct competitor. Like Bitcoin, Litecoin exists as a blockchain where participating nodes process transactions, and miners provide security and verification for each of those transactions.Litecoin was originally conceived and developed by Charlie Lee in 2011. For a period of time, Charlie was a Director of Engineering at Coinbase, having joined our team in 2013. Since its launch in 2011 Litecoin has seen steady adoption with an active community of traders, merchants, and developers. We believe Litecoin is here to stay and will continue to play an important role in cryptocurrency and digital asset development."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is the bitcoin blockchain?",
+	"ans":"The blockchain is a distributed, public ledger that contains the history of every bitcoin transaction.  Anyone can download a copy of the blockchain, and it can be inspected to trace the path of bitcoins from one bitcoin transaction to another. It should be noted that while there is a record of every bitcoin transaction ever made, these transactions are not inherently linked to real life identities. For this reason, Bitcoin is considered pseudonymous. Bitcoins themselves are not files stored on your computer’s hard drive like MP3s or PDFs. Rather “owning bitcoins”, means owning a bitcoin address, which has a balance recorded on the blockchain. What it means to own a bitcoin address is to control the associated Private Key, and therefore allow the signing of transactions."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is a Block?",
+	"ans":"A Block refers to a set of Bitcoin transactions from a certain time period. Blocks are “stacked” on top of each other in such a way that one block depends on the previous. In this manner, a chain of blocks is created, and thus we come to the term “blockchain”.Finding and publishing new blocks is what Bitcoin miners do to earn bitcoins. Whenever a new block is broadcast, approximately every 10 minutes, a quantity of bitcoins is received by the miner who solved that block. Bitcoin miners keep the network secure, and this is how they are rewarded. This system ensures that all transactions are valid, and keeps the bitcoin network secure from fraud."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is a Bitcoin wallet?",
+	"ans":"Similar to a traditional wallet you may carry in your pocket, a bitcoin wallet is used to store money. The difference is that instead of storing a collection of bills and cards, a bitcoin wallet stores a collection of bitcoin private keys. Typically a wallet is encrypted with a password or otherwise protected from unauthorized access.Unlike the Bitcoin network, a Bitcoin wallet is controlled only by its owner (it's not distributed and shared like the blockchain). It's important to keep your bitcoin wallet safe by either setting a strong password or otherwise keeping it out of reach of malicious individuals."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do I get a Bitcoin address?",
+	"ans":"Getting a Bitcoin address with a Coinbase wallet is easy. Sign up with Coinbase here: https://www.coinbase.com/signup Go to the Addresses Section here: https://www.coinbase.com/addresses Click ‘Create New Address' Any address you create here will remain associated with your Coinbase account forever. You can generate as many addresses as you like. Click the Details button next to any address to display the corresponding QR code. These work similar to barcodes at the grocery store,and can be scanned with a smartphone to reveal your bitcoin address."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Where can I spend bitcoin?",
+	"ans":"In some ways, paying with bitcoin is similar to sending an email, except that instead of sending a message to an email address, you’re sending an amount of money to a bitcoin address One of the nice things about paying with bitcoin is that you don’t need to give up as much personal information. You only need to give your name and address if you’re purchasing physical goods. If it’s a digital item, then your email will usually suffice, and if you’re making a donation, you may not need to provide any information at all After you provide the required information, rather than asking for a credit card number, the website will display the bitcoin payment information which will consist of at least one of the following: A link to Sign in to Coinbase A QR Code A Bitcoin address At this stage, the process may differ slightly depending on the type of bitcoin wallet you're using."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Why does Bitcoin change value? Why is the price so volatile?",
+	"ans":"The value of a bitcoin is tied purely to the laws of supply and demand. In other words, the price is determined only by what the market is willing to pay. If more people want to buy bitcoins, then the price will increase. If more people want to sell, the price will decrease Bitcoin’s value can be volatile when compared to more established currencies and commodities. This can be attributed to its relatively small market size, and it means that a smaller amount of money can move the Bitcoin price more significantly. This discrepancy will decrease naturally over time as the currency matures and the market size increases. For merchants wishing to accept bitcoin now, Coinbase provides a way to avoid volatility altogether by instantly exchanging bitcoin payments to your local currency."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Does Coinbase support Ethereum smart contracts?",
+	"ans":"Smart contracts are an important part of some digital currency networks, such as Ethereum, which allow the use of programmatic logic to automatically execute actions based on the transaction input sent to the contract. Smart contracts can be simple or complex, and can become the building blocks for many automated systems such as token sales, autonomous organizations, etc."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do I set up 2-factor authentication?",
+	"ans":"Google Authenticator or similar authenticator apps provide the most secure configuration for 2FA. These do not require phone reception or internet access once set up. Authenticator is not associated with your phone number (although we do require a phone number to be registered to buy or sell digital currency) so is not susceptible to phone number porting attacks."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How can I update my legal name?",
+	"ans":"To update the legal name listed on your Coinbase account, please Navigate to www.coinbase.com/verify-id/ Complete the steps to verify your identity using an official ID document The legal name on your Coinbase account will be automatically updated Learn more about Identify Verification here."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How is my bank account information protected?",
+	"ans":"At Coinbase we go to great lengths to keep all of your sensitive information safe Account numbers and routing numbers are stored using bank level AES-256 encryption on our servers.In addition, all traffic goes over SSL to prevent third parties from eavesdropping on your connection.Employee access is heavily restricted and we require background checks on all employees."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"How do i report phishing sites?",
+	"ans":"Phishing sites are malicious websites which imitate an authentic site in order to trick visitors into entering their password. To avoid phishing sites, always make sure you're entering information on www.coinbase.com and not a different web address If you believe you've encountered a phishing site, please use the following link to notify us: Report Coinbase Phishing Sites.Our security team will investigate your submission and work towards shutting down the malicious site you have encountered as soon as possible."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Why did my wallet address change?",
+	"ans":"There is no need to be alarmed by this. In fact, we automatically generate a new address for you after every transaction you make or when funds are moved between your wallet and our cold-storage system. This is done to protect your privacy, so that a third-party can not view all other transactions associated with your account simply by using a blockchain explorer to look-up an address they know to be yours.  "
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Where can I find the private keys for my wallet?",
+	"ans":"As Coinbase is a hosted wallet, it's not feasible to provide the private keys to individual wallet addresses; doing so would prevent us from taking advantage of our secure cold-storage technology to protect your funds. This not only ensures your security but it also allows us to reduce the cost of sending digital currency to another Coinbase account You can always find and create new addresses to be associated with your Coinbase wallet on your Addresses page."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Do taxes apply to virtual currency gains?",
+	"ans":"Yes. Although Coinbase cannot provide legal or tax advice, the U.S. Internal Revenue Service has released guidelines for how to report and pay taxes relating to virtual currency activity. You can read the guidelines from the official IRS.gov website here: http://www.irs.gov/pub/irs-drop/n-14-21.pdf."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Will Coinbase send me a 1099 or similar form?",
+	"ans":"Coinbase provides Form 1099-K to certain business customers and GDAX customers that have received at least $20,000 cash for sales of virtual currency related to at least 200 transactions in a calendar year. If a U.S. customer has met these criteria in a calendar year, the aggregate amount of all the customer’s transactions for such year will be reported to you on Form 1099-K. Coinbase will provide a copy of the 1099-K to you on or before January 31 for the prior calendar year. We will provide a separate copy to the IRS."
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is a callback?",
+	"ans":"A callback is a way of notifying your website that an order has been paid by a customer. In order to set up callback processing:Create a page on your website to process these notifications (e.g. mark the customer’s order as completed in your database) Navigate to the Merchant Settings page of your account: https://www.coinbase.com/merchant_settings In the \"Callback URL\" field, input the URL of the page created in step one Submit the form, then press the \"Test Now\" button to receive a sample callback"
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"What is the TestNet?",
+	"ans":"The TestNet is separate from the Bitcoin network, used primarily by developers for testing Bitcoin-related applications. Although similar, the TestNet and the Bitcoin network are not compatible, meaning you can't use bitcoins on the TestNet, and you can't use TestNet coins on the Bitcoin network"
 	},
 	{		
-	"ques":"",
-	"ans":""
+	"ques":"Where can I get TestNet coins?",
+	"ans":"Although TestNet coins have no value, like Bitcoin, there is a finite supply, and you must acquire them somehow. Some of the more popular ways are as follows:*Mining: TestNet coins can be mined using the same software used to mine bitcoins. A web search for \"testnet mining\" should turn up the information necessary to connect your mining hardware to a TestNet mining pool, and begin acquiring coins. If that sounds like too much work however, there are easier ways *FaucetsOne simple way to acquire TestNet coins is through a web-based service known as a faucet. These are services set up by individuals or organizations with TestNet coins to spare. A web search for \"bitcoin testnet faucet\" should point you to the latest available faucets."
 	}
 ]
