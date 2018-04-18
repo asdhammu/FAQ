@@ -14,14 +14,14 @@ import edu.utdallas.model.QuesAnswer;
 
 public class BagOfWords implements IQuestionAnswer {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(BagOfWords.class);
-
-	private static ElasticSearchUtil elasticSearchUtil = new ElasticSearchUtil();
+	private static final Logger LOGGER = LoggerFactory.getLogger(BagOfWords.class);	
 
 	public PriorityQueue<QuesAnswer> getTopTenQuestions(String query) {
 
 		LOGGER.info("query is:- " + query);
 
+		ElasticSearchUtil elasticSearchUtil = new ElasticSearchUtil();
+		
 		PriorityQueue<QuesAnswer> priorityQueue = new PriorityQueue<QuesAnswer>(10, new Comparator<QuesAnswer>() {
 			public int compare(QuesAnswer o1, QuesAnswer o2) {
 
@@ -67,6 +67,12 @@ public class BagOfWords implements IQuestionAnswer {
 
 		} catch (IOException e) {
 			LOGGER.error(e.getMessage());
+		}finally {
+			try {
+				elasticSearchUtil.close();
+			} catch (IOException e) {
+				LOGGER.error(e.getMessage());
+			}
 		}
 
 		return priorityQueue;

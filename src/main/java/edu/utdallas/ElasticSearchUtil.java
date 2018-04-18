@@ -58,7 +58,7 @@ public class ElasticSearchUtil {
 	}
 
 	/**
-	 * Create index with index name and mappping
+	 * Create index with index name and mapping
 	 * @param indexName
 	 * @param mapping
 	 * @throws Exception
@@ -103,30 +103,6 @@ public class ElasticSearchUtil {
 		}
 
 	}
-
-	/**
-	 * 
-	 * @return
-	 * @throws IOException
-	 *//*
-	public List<QuesAnswer> getAllQuestion() throws IOException {
-
-		SearchResponse response = matchAll(INDEX, TYPE);
-
-		List<QuesAnswer> list = new ArrayList<QuesAnswer>();
-
-		for (SearchHit hit : response.getHits().getHits()) {
-
-			QuesAnswer answer = new QuesAnswer();
-			answer.setQues(hit.getSourceAsMap().get("ques").toString());
-			answer.setAns(hit.getSourceAsMap().get("ans").toString());
-			answer.setId(hit.getId());
-			list.add(answer);
-		}
-
-		return list;
-
-	}*/
 
 	/**
 	 * 
