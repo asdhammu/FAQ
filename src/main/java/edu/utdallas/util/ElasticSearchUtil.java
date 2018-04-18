@@ -1,4 +1,4 @@
-package edu.utdallas;
+package edu.utdallas.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -87,7 +87,7 @@ public class ElasticSearchUtil {
 	public void addAllQuestions() throws JsonParseException, JsonMappingException, IOException {
 
 		List<QuesAnswer> list = mapper.readValue(
-				new File(System.getProperty("user.dir") + "/src/main/java/edu/utdallas/questions.json"),
+				new File(System.getProperty("user.dir") + "/src/main/resources/questions.json"),
 				mapper.getTypeFactory().constructCollectionType(List.class, QuesAnswer.class));
 		int i = 1;
 		for (QuesAnswer a : list) {

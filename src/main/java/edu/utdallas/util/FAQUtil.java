@@ -1,4 +1,4 @@
-package edu.utdallas;
+package edu.utdallas.util;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,15 +8,21 @@ import java.util.Map;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.SearchHit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import edu.utdallas.factory.ElasticSearchFactory;
 import edu.utdallas.model.QuesAnswer;
 
 public class FAQUtil {
 
-	private static ElasticSearchUtil elasticSearchUtil = new ElasticSearchUtil();
+	private static ElasticSearchUtil elasticSearchUtil = ElasticSearchFactory.getSearchUtil();
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(FAQUtil.class);
+	
 	public static void createBagOfWords() {
 
+		LOGGER.info("Starting creating bag of words");
 		try {
 
 			elasticSearchUtil.createIndex("bagofword");
@@ -50,6 +56,8 @@ public class FAQUtil {
 				e.printStackTrace();
 			}
 		}
+		
+		LOGGER.info("Bag of words created");
 
 	}
 

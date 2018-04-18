@@ -1,4 +1,4 @@
-package edu.utdallas;
+package edu.utdallas.algorithm;
 
 import java.io.IOException;
 import java.util.Comparator;
@@ -9,8 +9,11 @@ import org.elasticsearch.search.SearchHit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import edu.utdallas.factory.ElasticSearchFactory;
 import edu.utdallas.model.IQuestionAnswer;
 import edu.utdallas.model.QuesAnswer;
+import edu.utdallas.util.ElasticSearchUtil;
+import edu.utdallas.util.FAQUtil;
 
 public class BagOfWords implements IQuestionAnswer {
 
@@ -20,7 +23,7 @@ public class BagOfWords implements IQuestionAnswer {
 
 		LOGGER.info("query is:- " + query);
 
-		ElasticSearchUtil elasticSearchUtil = new ElasticSearchUtil();
+		ElasticSearchUtil elasticSearchUtil = ElasticSearchFactory.getSearchUtil();
 		
 		PriorityQueue<QuesAnswer> priorityQueue = new PriorityQueue<QuesAnswer>(10, new Comparator<QuesAnswer>() {
 			public int compare(QuesAnswer o1, QuesAnswer o2) {

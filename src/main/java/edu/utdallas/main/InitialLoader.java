@@ -1,9 +1,12 @@
-package edu.utdallas;
+package edu.utdallas.main;
 
 import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import edu.utdallas.util.ElasticSearchUtil;
+import edu.utdallas.util.FAQUtil;
 
 public class InitialLoader {
 
