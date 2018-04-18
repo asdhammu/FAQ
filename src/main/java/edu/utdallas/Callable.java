@@ -22,6 +22,7 @@ public class Callable {
 			    "        },\n" +
 			    "		 \"ans\": {\n" +
 			    "          \"type\": \"text\"\n" +
+			    
 			    "        }\n" +
 			    "      }\n" +
 			    "    }\n" +
@@ -32,11 +33,12 @@ public class Callable {
 			searchUtil.createIndex("quesans", mapping);			
 		
 		}catch(Exception e) {
+			
 			LOG.error(e.getMessage());
 		}
 			
 		
-		
+		searchUtil.BulkRequest();
 		
 		
 		searchUtil.close();
