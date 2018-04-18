@@ -36,7 +36,7 @@
 	},
 	{		
 	"ques":"Why are buys and deposits disabled on my account?",
-	"ans":"There could be two possible reasons: 1. If we have received a chargeback when attempting to process one of your trades, it may be preventing us from completing further orders. If you are aware of any chargebacks or reversals that have occurred on a recent trade, please include this information when contacting us. 2. In other cases, we may just need some additional information to confirm your ownership of the payment methods added to your account. If you have not done so already, please make sure there is an ID document uploaded at https://www.coinbase.com/verifications/documents/new for each person who has information verified on your Coinbase account. This will help expedite our review process."
+	"ans":"There could be two possible reasons: If we have received a chargeback when attempting to process one of your trades, it may be preventing us from completing further orders. If you are aware of any chargebacks or reversals that have occurred on a recent trade, please include this information when contacting us. 2. In other cases, we may just need some additional information to confirm your ownership of the payment methods added to your account. If you have not done so already, please make sure there is an ID document uploaded at https://www.coinbase.com/verifications/documents/new for each person who has information verified on your Coinbase account. This will help expedite our review process."
 	},
 	{		
 	"ques":"Was my GBP converted to EUR when I made a withdrawal?",
@@ -60,7 +60,7 @@
 	},
 	{		
 	"ques":"When do my limits replenish?",
-	"ans":"Limits are refilled gradually over the course of one week from the time your order is confirmed. For example if you placed a buy order for the maximum amount, your limits would be 1/7th replenished each day and fully replenished after 1 week."
+	"ans":"Limits are refilled gradually over the course of one week from the time your order is confirmed. For example if you placed a buy order for the maximum amount, your limits would be 1/7th replenished each day and fully replenished after one week."
 	},
 	{		
 	"ques":"How do I know my limits have changed?",
@@ -124,11 +124,11 @@
 	},
 	{		
 	"ques":"What is Litecoin?",
-	"ans":"Litecoin is similar to Bitcoin, and in some ways a direct competitor. Like Bitcoin, Litecoin exists as a blockchain where participating nodes process transactions, and miners provide security and verification for each of those transactions.Litecoin was originally conceived and developed by Charlie Lee in 2011. For a period of time, Charlie was a Director of Engineering at Coinbase, having joined our team in 2013. Since its launch in 2011 Litecoin has seen steady adoption with an active community of traders, merchants, and developers. We believe Litecoin is here to stay and will continue to play an important role in cryptocurrency and digital asset development."
+	"ans":"Litecoin is similar to Bitcoin, and in some ways a direct competitor. Like Bitcoin, Litecoin exists as a blockchain where participating nodes process transactions, and miners provide security and verification for each of those transactions. Litecoin was originally conceived and developed by Charlie Lee in 2011. For a period of time, Charlie was a Director of Engineering at Coinbase, having joined our team in 2013. Since its launch in 2011 Litecoin has seen steady adoption with an active community of traders, merchants, and developers. We believe Litecoin is here to stay and will continue to play an important role in cryptocurrency and digital asset development."
 	},
 	{		
 	"ques":"What is the bitcoin blockchain?",
-	"ans":"The blockchain is a distributed, public ledger that contains the history of every bitcoin transaction.  Anyone can download a copy of the blockchain, and it can be inspected to trace the path of bitcoins from one bitcoin transaction to another. It should be noted that while there is a record of every bitcoin transaction ever made, these transactions are not inherently linked to real life identities. For this reason, Bitcoin is considered pseudonymous. Bitcoins themselves are not files stored on your computer’s hard drive like MP3s or PDFs. Rather “owning bitcoins”, means owning a bitcoin address, which has a balance recorded on the blockchain. What it means to own a bitcoin address is to control the associated Private Key, and therefore allow the signing of transactions."
+	"ans":"The blockchain is a distributed, public ledger that contains the history of every bitcoin transaction. Anyone can download a copy of the blockchain, and it can be inspected to trace the path of bitcoins from one bitcoin transaction to another. It should be noted that while there is a record of every bitcoin transaction ever made, these transactions are not inherently linked to real life identities. For this reason, Bitcoin is considered pseudonymous. Bitcoins themselves are not files stored on your computer’s hard drive like MP3s or PDFs. Rather “owning bitcoins”, means owning a bitcoin address, which has a balance recorded on the blockchain. What it means to own a bitcoin address is to control the associated Private Key, and therefore allow the signing of transactions."
 	},
 	{		
 	"ques":"What is a Block?",
@@ -136,7 +136,7 @@
 	},
 	{		
 	"ques":"What is a Bitcoin wallet?",
-	"ans":"Similar to a traditional wallet you may carry in your pocket, a bitcoin wallet is used to store money. The difference is that instead of storing a collection of bills and cards, a bitcoin wallet stores a collection of bitcoin private keys. Typically a wallet is encrypted with a password or otherwise protected from unauthorized access.Unlike the Bitcoin network, a Bitcoin wallet is controlled only by its owner (it's not distributed and shared like the blockchain). It's important to keep your bitcoin wallet safe by either setting a strong password or otherwise keeping it out of reach of malicious individuals."
+	"ans":"Similar to a traditional wallet you may carry in your pocket, a bitcoin wallet is used to store money. The difference is that instead of storing a collection of bills and cards, a bitcoin wallet stores a collection of bitcoin private keys. Typically a wallet is encrypted with a password or otherwise protected from unauthorized access. Unlike the Bitcoin network, a Bitcoin wallet is controlled only by its owner (it's not distributed and shared like the blockchain). It's important to keep your bitcoin wallet safe by either setting a strong password or otherwise keeping it out of reach of malicious individuals."
 	},
 	{		
 	"ques":"How do I get a Bitcoin address?",
@@ -172,7 +172,7 @@
 	},
 	{		
 	"ques":"Why did my wallet address change?",
-	"ans":"There is no need to be alarmed by this. In fact, we automatically generate a new address for you after every transaction you make or when funds are moved between your wallet and our cold-storage system. This is done to protect your privacy, so that a third-party can not view all other transactions associated with your account simply by using a blockchain explorer to look-up an address they know to be yours.  "
+	"ans":"There is no need to be alarmed by this. In fact, we automatically generate a new address for you after every transaction you make or when funds are moved between your wallet and our cold-storage system. This is done to protect your privacy, so that a third-party can not view all other transactions associated with your account simply by using a blockchain explorer to look-up an address they know to be yours."
 	},
 	{		
 	"ques":"Where can I find the private keys for my wallet?",
@@ -180,7 +180,7 @@
 	},
 	{		
 	"ques":"Do taxes apply to virtual currency gains?",
-	"ans":"Yes. Although Coinbase cannot provide legal or tax advice, the U.S. Internal Revenue Service has released guidelines for how to report and pay taxes relating to virtual currency activity. You can read the guidelines from the official IRS.gov website here: http://www.irs.gov/pub/irs-drop/n-14-21.pdf."
+	"ans":"Yes. Although Coinbase cannot provide legal or tax advice, the U.S. Internal Revenue Service has released guidelines for how to report and pay taxes relating to virtual currency activity. You can read the guidelines from the official IRS website here: http://www.irs.gov/pub/irs-drop/n-14-21.pdf."
 	},
 	{		
 	"ques":"Will Coinbase send me a 1099 or similar form?",

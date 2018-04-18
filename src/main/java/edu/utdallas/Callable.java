@@ -4,7 +4,6 @@ public class Callable {
 
 	public static void main(String[] args) {
 			
-		FAQUtil.createBagOfWords();
 		
 		
 	}

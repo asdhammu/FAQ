@@ -34,6 +34,8 @@ public class InitialLoader {
 			searchUtil.createIndex("quesans", mapping);			
 			searchUtil.addAllQuestions();		
 			
+			FAQUtil.createBagOfWords();
+			
 		}catch(Exception e) {			
 			LOG.error(e.getMessage());
 		}finally {		
