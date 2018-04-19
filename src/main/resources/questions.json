@@ -1,10 +1,10 @@
 [	{		
 	"ques":"How do I buy a digital currency?",
-	"ans": "Go to the Buys page Select the type of digital currency you'd like to buy Enter the amount you'd like to buy denominated in either digital currency or your local currency Select the wallet you wish to have your funds deposited into Select your desired payment method Confirm the order is correct and click Buy."
+	"ans": "Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment method Confirm the order is correct and click Buy."
 	},
 	{		
 	"ques":"How do I sell my digital currency?",
-	"ans":"For supported countries and payment methods, you can sell or your bitcoin or other digital currency for your local currency and have the proceeds deposited in your linked bank account or local currency wallet Go to the Sells page Enter the amount that you wish to sell Select the wallet you wish to sell from (for example your BTC Wallet) Select the account you wish to deposit to (such as your linked bank account) Confirm the order is correct and click Sell."
+	"ans":"For supported countries and payment methods, you can sell your bitcoin or other digital currency for your local currency and have the proceeds deposited in your linked bank account or local currency wallet. Go to the Sells page Enter the amount that you wish to sell. Select the wallet you wish to sell from.Select the account you wish to deposit to. Confirm the order is correct and click Sell."
 	},
 	{		
 	"ques":"How long does a transaction take to complete?",
@@ -12,15 +12,15 @@
 	},
 	{		
 	"ques":"What countries are buys and sells available in?",
-	"ans":"Digital currency conversion services are currently available to customers in Australia*, Canada*, Singapore, the United States, the United Kingdom, and the following European countries Austria Belgium Bulgaria Croatia Cyprus Czech Republic Denmark Finland Greece Hungary Ireland Italy Latvia Liechtenstein Malta Monaco Netherlands Norway Poland Portugal San Marino Slovakia Slovenia Spain Sweden Switzerland"
+	"ans":"Digital currency conversion services are currently available to customers in Australia, Canada, Singapore, the United States, the United Kingdom, and the following European countries: Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Finland, Greece, Hungary, Ireland, Italy, Latvia, Liechtenstein, Malta, Monaco, Netherlands, Norway, Poland, Portugal, San Marino, Slovakia, Slovenia, Spain, Sweden, Switzerland"
 	},
 	{		
 	"ques":"How are fees applied when I buy digital currency?",
-	"ans":"Buying Digital Currency Fees are added to the amount entered to arrive at the total for the order For example, if you enter $100 USD as the amount of BTC to buy, and the fee is 1.49%, your total will be $101.49 That total will be charged to your payment method and you will receive $100 worth of BTC."
+	"ans":"Buying Digital Currency Fees are added to the amount entered to arrive at the total for the order. For example, if you enter $100 USD as the amount of BTC to buy, and the fee is 1.49%, your total will be $101.49. That total will be charged to your payment method and you will receive $100 worth of BTC."
 	},
 	{		
 	"ques":"How are fees applied when I sell digital currency?",
-	"ans":"Coinbase fees are subtracted from the amount entered to arrive at the total. For example, if you enter $100 USD as the amount of BTC to sell, and the fee is 1.49%, your total will be $98.51. $100 Worth of BTC will be removed from your Coinbase account and $98.51 will be credited to the selected payment method The total amount of the transaction denominated in both the digital currency and your local currency, as well as the fees being charged, will always be displayed to you on the confirmation screen."
+	"ans":"Coinbase fees are subtracted from the amount entered to arrive at the total. For example, if you enter $100 USD as the amount of BTC to sell, and the fee is 1.49%, your total will be $98.51. $100 Worth of BTC will be removed from your Coinbase account and $98.51 will be credited to the selected payment method. The total amount of the transaction denominated in both the digital currency and your local currency, as well as the fees being charged, will always be displayed to you on the confirmation screen."
 	},
 	{		
 	"ques":"What price will I receive when I buy or sell digital currency?",
@@ -36,7 +36,7 @@
 	},
 	{		
 	"ques":"Why are buys and deposits disabled on my account?",
-	"ans":"There could be two possible reasons: If we have received a chargeback when attempting to process one of your trades, it may be preventing us from completing further orders. If you are aware of any chargebacks or reversals that have occurred on a recent trade, please include this information when contacting us. 2. In other cases, we may just need some additional information to confirm your ownership of the payment methods added to your account. If you have not done so already, please make sure there is an ID document uploaded at https://www.coinbase.com/verifications/documents/new for each person who has information verified on your Coinbase account. This will help expedite our review process."
+	"ans":"There could be two possible reasons:1. If we have received a chargeback when attempting to process one of your trades, it may be preventing us from completing further orders. If you are aware of any chargebacks or reversals that have occurred on a recent trade, please include this information when contacting us. 2. In other cases, we may just need some additional information to confirm your ownership of the payment methods added to your account. If you have not done so already, please make sure there is an ID document uploaded at https://www.coinbase.com/verifications/documents/new for each person who has information verified on your Coinbase account. This will help expedite our review process."
 	},
 	{		
 	"ques":"Was my GBP converted to EUR when I made a withdrawal?",
@@ -48,7 +48,7 @@
 	},
 	{		
 	"ques":"How much currency can I purchase?",
-	"ans":"The buy limit listed on the verifications page is a total maximum for all available funding methods. You may have noticed that individual funding method limits are different from the buy level limitations listed on the verifications page. The buy limit available for each funding source is visible on the buy page when you select that funding source. Coinbase may have separate limits for the different account funding sources listed below. * Bank transfers (ACH, SEPA, Bank wire, xfers) * Instant purchases via bank transfers, enabled by account history and a backup credit card (available to select users in the US only) * Currency Wallet stored value (USD, CAD, EUR, GBP, etc) * Instant buys (credit card/debit card, where available). You can add funding sources on the payment methods page. You can also fund your Coinbase account with a wire transfer (not available in all regions) for up to the buy limit listed on your verifications page, without linking a bank account to your Coinbase account."
+	"ans":"The buy limit listed on the verifications page is a total maximum for all available funding methods. You may have noticed that individual funding method limits are different from the buy level limitations listed on the verifications page. The buy limit available for each funding source is visible on the buy page when you select that funding source. Coinbase may have separate limits for the different account funding sources listed below. 1. Bank transfers (ACH, SEPA, Bank wire, xfers) 2. Instant purchases via bank transfers, enabled by account history and a backup credit card (available to select users in the US only) 3. Currency Wallet stored value (USD, CAD, EUR, GBP, etc) 4. Instant buys (credit card/debit card, where available). You can add funding sources on the payment methods page. You can also fund your Coinbase account with a wire transfer (not available in all regions) for up to the buy limit listed on your verifications page, without linking a bank account to your Coinbase account."
 	},
 	{		
 	"ques":"What are my account limits?",
@@ -56,7 +56,7 @@
 	},
 	{		
 	"ques":"How are account limits set for each linked account?",
-	"ans":"For security, regulatory compliance, and fraud prevention, there are limits to how much digital currency can be bought and sold with your Coinbase account. These limits vary based on the payment method used, your account age, purchase history, and other factors. Each external account linked to your Coinbase account has a different limit. For example, the limits on a linked credit card are separate from a linked bank account. Limits for each linked account are calculated separately. To increase the limit for a specific linked account, be sure to use that account to buy and sell *There is also an overall limit for your Coinbase account regardless of which payment method is used."
+	"ans":"For security, regulatory compliance, and fraud prevention, there are limits to how much digital currency can be bought and sold with your Coinbase account. These limits vary based on the payment method used, your account age, purchase history, and other factors. Each external account linked to your Coinbase account has a different limit. For example, the limits on a linked credit card are separate from a linked bank account. Limits for each linked account are calculated separately. To increase the limit for a specific linked account, be sure to use that account to buy and sell.There is also an overall limit for your Coinbase account regardless of which payment method is used."
 	},
 	{		
 	"ques":"When do my limits replenish?",
@@ -68,7 +68,7 @@
 	},
 	{		
 	"ques":"Why was my purchase declined?",
-	"ans":"Bitcoin and ether transactions are not reversible, so for your safety and ours we use a risk algorithm to flag potentially fraudulent purchases. Unfortunately, sometimes it flags legitimate transactions too. The algorithm is always improving but is not perfect. On occasion it can incorrectly cancel a transaction even when it is not fraudulent. If you have transactions that have been inaccurately flagged, we genuinely apologize and we ask that you please take the following steps: Complete the verification steps found here: https://www.coinbase.com/verifications 2. Verify your ID using our secure upload portal here: https://www.coinbase.com/verifications/documents 3. Contact us"
+	"ans":"Bitcoin and other transactions are not reversible, so for your safety and ours we use a risk algorithm to flag potentially fraudulent purchases. Unfortunately, sometimes it flags legitimate transactions too. The algorithm is always improving but is not perfect. On occasion it can incorrectly cancel a transaction even when it is not fraudulent. If you have transactions that have been inaccurately flagged, we genuinely apologize and we ask that you please take the following steps:1. Complete the verification steps found here: https://www.coinbase.com/verifications 2. Verify your ID using our secure upload portal here: https://www.coinbase.com/verifications/documents 3. Contact us"
 	},
 	{		
 	"ques":"How can I accept bitcoin payments safely when the price isn’t stable?",
@@ -76,7 +76,7 @@
 	},
 	{		
 	"ques":"Closing a coinbase account?",
-	"ans":"Coinbase may initiate closure of customer accounts. This can happen for a number of reasons including, but not limited to, engaging in prohibited activity as defined in ourUser Agreement. When this happens, buy/sell services are disabled and in addition you are no longer permitted to use your Coinbase account as a digital currency wallet. However, you are allowed to withdraw all funds from your Coinbase account and send it to any wallet address you choose, so access to digital currency is never “frozen” in this case. You are also allowed to clear any balances in a local currency wallet by withdrawing to a verified bank account before the account closure proceeds."
+	"ans":"Coinbase may initiate closure of customer accounts. This can happen for a number of reasons including, but not limited to, engaging in prohibited activity as defined in our User Agreement. When this happens, buy/sell services are disabled and in addition you are no longer permitted to use your Coinbase account as a digital currency wallet. However, you are allowed to withdraw all funds from your Coinbase account and send it to any wallet address you choose, so access to digital currency is never “frozen” in this case. You are also allowed to clear any balances in a local currency wallet by withdrawing to a verified bank account before the account closure proceeds."
 	},
 	{		
 	"ques":"What is instant exchange?",
