@@ -41,8 +41,6 @@ public class InitialLoader {
 			
 		}catch(Exception e) {			
 			LOG.error(e.getMessage());
-		}finally {		
-			searchUtil.close();
 		}
 	}
 	

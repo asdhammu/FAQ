@@ -70,12 +70,6 @@ public class BagOfWords implements IQuestionAnswer {
 
 		} catch (IOException e) {
 			LOGGER.error(e.getMessage());
-		}finally {
-			try {
-				elasticSearchUtil.close();
-			} catch (IOException e) {
-				LOGGER.error(e.getMessage());
-			}
 		}
 
 		return priorityQueue;

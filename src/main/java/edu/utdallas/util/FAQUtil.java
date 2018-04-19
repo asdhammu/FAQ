@@ -48,13 +48,7 @@ public class FAQUtil {
 			}
 
 		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				elasticSearchUtil.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			LOGGER.error(e.getMessage());
 		}
 		
 		LOGGER.info("Bag of words created");

@@ -23,7 +23,7 @@ public class Callable {
 
 			QuesAnswer peek = list.peek();
 			
-			LOGGER.debug(peek.getQues() + " " + peek.getCount());
+			System.out.println(peek.getQues() + " " + peek.getCount());
 
 			list.remove();
 		}
