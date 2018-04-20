@@ -26,36 +26,18 @@
 		    <artifactId>elasticsearch-rest-high-level-client</artifactId>
 		    <version>6.2.3</version>
 		</dependency>
-		<!-- <dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-simple</artifactId>
-		    <version>1.7.25</version>
-		    <scope>test</scope>
-		</dependency>
-		 -->
 		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-api</artifactId>
-		    <version>1.7.25</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.slf4j</groupId>		
-		    <artifactId>slf4j-jdk14</artifactId>		
-		    <version>1.7.25</version>		
-		</dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.5</version>
+        </dependency>
 		
-		<!-- <dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-log4j12</artifactId>
-		    <version>1.7.25</version>
-		    <scope>test</scope>
-		</dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-mllib -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-mllib_2.11</artifactId>
-    <version>2.3.0</version>
-</dependency>
+		<dependency>
+		    <groupId>org.apache.spark</groupId>
+		    <artifactId>spark-mllib_2.11</artifactId>
+		    <version>2.3.0</version>
+		</dependency>
 		
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

@@ -52,7 +52,8 @@ public class ElasticSearchUtil {
 
 		CreateIndexRequest createIndexRequest = new CreateIndexRequest(indexName);
 		createIndexRequest.settings(
-				Settings.builder().put("index.number_of_shards", 3).put("index.mapping.total_fields.limit", 10000));
+				Settings.builder().put("index.number_of_shards", 3).put("index.mapping.total_fields.limit", 10000)
+				.put("index.mapping.ignore_malformed", true));
 
 		client.indices().create(createIndexRequest);
 	}
@@ -69,7 +70,8 @@ public class ElasticSearchUtil {
 
 		CreateIndexRequest createIndexRequest = new CreateIndexRequest(indexName);
 		createIndexRequest.settings(
-				Settings.builder().put("index.number_of_shards", 3).put("index.mapping.total_fields.limit", 10000));
+				Settings.builder().put("index.number_of_shards", 3).put("index.mapping.total_fields.limit", 10000)
+				.put("index.mapping.ignore_malformed", true));
 
 		createIndexRequest.mapping(indexName, mapping, XContentType.JSON);
 

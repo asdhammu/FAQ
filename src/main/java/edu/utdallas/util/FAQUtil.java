@@ -41,10 +41,22 @@ public class FAQUtil {
 					} else {
 						map.put(s, Integer.toString(1));
 					}
-
 				}
-
-				elasticSearchUtil.indexValue("bagofword", "doc", quesAns.getId(), map);
+				
+				
+				Map<String, String> countToValue = new HashMap<String, String>();
+				
+				for(Map.Entry<String, String> m:map.entrySet()) {
+					
+					if(countToValue.containsKey(m.getValue())) {
+						String value =  countToValue.get(m.getValue()) + " "  +  m.getKey(); 
+						countToValue.put(m.getValue(), value);						
+					}else {
+						countToValue.put(m.getValue(), m.getKey());
+					}
+				}
+				
+				elasticSearchUtil.indexValue("bagofword", "doc", quesAns.getId(), countToValue);
 			}
 
 		} catch (IOException e) {

@@ -52,13 +52,18 @@ public class BagOfWords implements IQuestionAnswer {
 
 				Map<String, Object> map = hit.getSourceAsMap();
 
+				
 				for (Map.Entry<String, Object> m : map.entrySet()) {
 
-					for (String s : querySplit) {
-						if (s.equalsIgnoreCase(m.getKey())) {
-							count += Integer.parseInt((String) m.getValue());
+					String[] split = ((String)m.getValue()).split(" ");
+					
+					for(String sp:split) {
+						for (String s : querySplit) {
+							if (s.equalsIgnoreCase(sp)) {
+								count += Integer.parseInt((String) m.getKey());
+							}
 						}
-					}
+					}					
 				}
 
 				QuesAnswer quesAnswer = elasticSearchUtil.getQuesAnswerById(hit.getId());
