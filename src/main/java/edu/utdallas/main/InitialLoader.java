@@ -39,6 +39,8 @@ public class InitialLoader {
 			
 			FAQUtil.createBagOfWords();
 			
+			FAQUtil.createFeatures();
+			
 		}catch(Exception e) {			
 			LOG.error(e.getMessage());
 		}

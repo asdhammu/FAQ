@@ -145,6 +145,13 @@ public class ElasticSearchUtil {
 		return answer;
 	}
 	
+	public void indexValue(String index, String type, Map<String, String> map) throws IOException {
+
+		IndexRequest indexRequest = new IndexRequest(index, type).source(map);
+
+		client.index(indexRequest);
+
+	}
 	
 	/**
 	 * 

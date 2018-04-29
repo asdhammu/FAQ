@@ -6,6 +6,10 @@
   <name>NLP</name>
   
   <repositories>
+  		<repository>
+		  <id>clojars.org</id>
+		  <url>https://repo.clojars.org</url>
+		</repository>
 	  <repository>
 	    <id>elastic-lucene-snapshots</id>
 	    <name>Elastic Lucene Snapshots</name>
@@ -43,7 +47,30 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.6.3</version>
-		</dependency>						
+		</dependency>	
+		<dependency>
+	      <groupId>edu.stanford.nlp</groupId>
+	      <artifactId>stanford-corenlp</artifactId>
+	      <version>3.2.0</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>edu.stanford.nlp</groupId>
+	      <artifactId>stanford-corenlp</artifactId>
+	      <version>3.2.0</version>
+	      <classifier>models</classifier>
+	    </dependency>
+	    <dependency>
+	      <groupId>edu.stanford.nlp</groupId>
+	      <artifactId>stanford-parser</artifactId>
+	      <version>3.2.0</version>
+	    </dependency>
+		<!-- https://mvnrepository.com/artifact/net.sf.extjwnl/extjwnl -->
+		<dependency>
+		    <groupId>net.sf.extjwnl</groupId>
+		    <artifactId>extjwnl</artifactId>
+		    <version>1.6.9</version>
+		</dependency>
+							
 	</dependencies> 
  
 </project>
