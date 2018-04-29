@@ -120,7 +120,7 @@ public class ElasticSearchUtil {
 
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 		searchSourceBuilder.query(QueryBuilders.matchAllQuery());
-		searchSourceBuilder.size(50);
+		searchSourceBuilder.size(300);
 		searchRequest.source(searchSourceBuilder);
 
 		SearchResponse response = client.search(searchRequest);

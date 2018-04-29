@@ -1,5 +1,8 @@
 package edu.utdallas.util;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -123,6 +126,13 @@ public class FAQUtil {
 		return response.getHits().getHits();
 
 	}
+	
+	public static SearchHit[] getFeatures() throws IOException{
+		
+		SearchResponse response = elasticSearchUtil.matchAll("feature", "doc");
+
+		return response.getHits().getHits();
+	}
 
 	public static void createFeatures() throws JWNLException {
 
@@ -143,6 +153,8 @@ public class FAQUtil {
 		try {
 			List<QuesAnswer> list = getAllQuestion();
 
+			Set<String> stopWords = getStopWords();
+			
 			for (QuesAnswer ques : list) {
 
 				Annotation document = new Annotation(ques.getQues() + " " + ques.getAns());
@@ -160,81 +172,18 @@ public class FAQUtil {
 					StringBuilder lemmaBuilder = new StringBuilder();
 					StringBuilder stemBuilder = new StringBuilder();
 
+					StringBuilder exclueStopWords = new StringBuilder();
 					Set<String> hypernymSet = new HashSet<String>();
 					Set<String> synonymSet = new HashSet<String>();
 					Set<String> hyponymSet = new HashSet<String>();
-
-					for (CoreLabel token : sentence.get(TokensAnnotation.class)) {
-						// this is the text of the token
-						String word = token.get(TextAnnotation.class);
-						// this is the POS tag of the token
-						String pos = token.get(PartOfSpeechAnnotation.class);
-
-						String lemma = token.lemma();
-
-						String stem = morphology.stem(word);
-
-						lemmaBuilder.append(lemma).append(",");
-						posBuilder.append(pos).append(",");
-						stemBuilder.append(stem).append(",");
-
-						if (pos.equalsIgnoreCase("NN") || pos.equalsIgnoreCase("NNP")) {
-							IndexWord set = dictionary.lookupIndexWord(POS.NOUN, word);
-
-							if (set == null) {
-								continue;
-							}
-							List<Synset> synset = set.getSenses();
-
-							for (Synset syn : synset) {
-
-								if (PointerUtils.getSynonyms(syn).size() > 0) {
-									List<net.sf.extjwnl.data.Word> words = PointerUtils.getSynonyms(syn).get(0)
-											.getSynset().getWords();
-
-									for (net.sf.extjwnl.data.Word w : words) {
-										// synonymBuilder.append(w.getLemma()).append(",");
-										synonymSet.add(w.getLemma());
-									}
-								}
-
-								if (PointerUtils.getDirectHypernyms(syn).size() > 0) {
-									List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHypernyms(syn).get(0)
-											.getSynset().getWords();
-
-									for (net.sf.extjwnl.data.Word w : words) {
-										// hypernymBuilder.append(w.getLemma()).append(",");
-										hypernymSet.add(w.getLemma());
-									}
-								}
-
-								if (PointerUtils.getDirectHyponyms(syn).size() > 0) {
-									List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHyponyms(syn).get(0)
-											.getSynset().getWords();
-
-									for (net.sf.extjwnl.data.Word w : words) {
-										// hyponymBuilder.append(w.getLemma()).append(",");
-										hyponymSet.add(w.getLemma());
-									}
-
-								}
-
-							}
-
-						}
-
-					}
-
-					// hyponymSet.to
-
+					
+					extractFeatures(morphology, dictionary, stopWords, sentence, posBuilder, lemmaBuilder, stemBuilder,
+							exclueStopWords, hypernymSet, synonymSet, hyponymSet);
+					
 					posBuilder.setLength(posBuilder.length() - 1);
 					lemmaBuilder.setLength(lemmaBuilder.length() - 1);
 					stemBuilder.setLength(stemBuilder.length() - 1);
-					/*
-					 * hyponymBuilder.setLength(hyponymBuilder.length()-1);
-					 * hypernymBuilder.setLength(hypernymBuilder.length()-1);
-					 * synonymBuilder.setLength(synonymBuilder.length()-1);
-					 */
+					exclueStopWords.setLength(exclueStopWords.length()-1);
 					map.put("quesId", ques.getId());
 					map.put("pos", posBuilder.toString());
 					map.put("lemma", lemmaBuilder.toString());
@@ -243,7 +192,7 @@ public class FAQUtil {
 					map.put("hypernym", hypernymSet.toString());
 					map.put("synonym", synonymSet.toString());
 					map.put("hyponym", hyponymSet.toString());
-
+					map.put("excludeStop", exclueStopWords.toString());
 					Tree tree = sentence.get(TreeAnnotation.class);
 
 					map.put("parseTree", tree.toString());
@@ -265,5 +214,101 @@ public class FAQUtil {
 
 		LOGGER.info("features created");
 	}
+
+	
+	public static void extractFeatures(Morphology morphology, Dictionary dictionary, Set<String> stopWords,
+			CoreMap sentence, StringBuilder posBuilder, StringBuilder lemmaBuilder, StringBuilder stemBuilder,
+			StringBuilder exclueStopWords, Set<String> hypernymSet, Set<String> synonymSet, Set<String> hyponymSet)
+			throws JWNLException {
+		for (CoreLabel token : sentence.get(TokensAnnotation.class)) {
+			// this is the text of the token
+			String word = token.get(TextAnnotation.class);
+			// this is the POS tag of the token
+			String pos = token.get(PartOfSpeechAnnotation.class);
+
+			String lemma = token.lemma();
+
+			String stem = morphology.stem(word);
+
+			lemmaBuilder.append(lemma).append(",");
+			posBuilder.append(word.toLowerCase()).append("_").append(pos).append(",");
+			stemBuilder.append(stem).append(",");
+
+			if(!stopWords.contains(word)) {
+				exclueStopWords.append(word).append(",");
+			}
+			
+			if (pos.equalsIgnoreCase("NN") || pos.equalsIgnoreCase("NNP")) {
+				IndexWord set = dictionary.lookupIndexWord(POS.NOUN, word);
+
+				if (set == null) {
+					continue;
+				}
+				List<Synset> synset = set.getSenses();
+
+				for (Synset syn : synset) {
+
+					if (PointerUtils.getSynonyms(syn).size() > 0) {
+						List<net.sf.extjwnl.data.Word> words = PointerUtils.getSynonyms(syn).get(0)
+								.getSynset().getWords();
+
+						for (net.sf.extjwnl.data.Word w : words) {
+							// synonymBuilder.append(w.getLemma()).append(",");
+							synonymSet.add(w.getLemma());
+						}
+					}
+
+					if (PointerUtils.getDirectHypernyms(syn).size() > 0) {
+						List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHypernyms(syn).get(0)
+								.getSynset().getWords();
+
+						for (net.sf.extjwnl.data.Word w : words) {
+							// hypernymBuilder.append(w.getLemma()).append(",");
+							hypernymSet.add(w.getLemma());
+						}
+					}
+
+					if (PointerUtils.getDirectHyponyms(syn).size() > 0) {
+						List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHyponyms(syn).get(0)
+								.getSynset().getWords();
+
+						for (net.sf.extjwnl.data.Word w : words) {
+							// hyponymBuilder.append(w.getLemma()).append(",");
+							hyponymSet.add(w.getLemma());
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+	}
+	
+	
+	
+	
+	public static Set<String> getStopWords() throws IOException{
+	
+	  LOGGER.info("Loading stop words");
+      Set<String> set = new HashSet<String>();
+	  File file = new File(System.getProperty("user.dir") + "/src/main/resources/stopWords.txt");
+	 
+	  BufferedReader br = new BufferedReader(new FileReader(file));
+	 
+	  String st;
+	  while ((st = br.readLine()) != null) {	    
+	    set.add(st);
+	  }
+		
+	  br.close();
+	
+	  LOGGER.info("Stop words loaded");
+	  
+	  return set;
+	  
+	}
+	
 
 }

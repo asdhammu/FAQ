@@ -36,7 +36,6 @@ public class BagOfWords implements IQuestionAnswer {
 				}
 
 				return 0;
-
 			}
 		});
 
