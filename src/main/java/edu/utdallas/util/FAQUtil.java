@@ -3,16 +3,17 @@ package edu.utdallas.util;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.search.SearchHit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
@@ -28,6 +29,12 @@ import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
 import edu.utdallas.factory.ElasticSearchFactory;
 import edu.utdallas.model.QuesAnswer;
+import net.sf.extjwnl.JWNLException;
+import net.sf.extjwnl.data.IndexWord;
+import net.sf.extjwnl.data.POS;
+import net.sf.extjwnl.data.PointerUtils;
+import net.sf.extjwnl.data.Synset;
+import net.sf.extjwnl.dictionary.Dictionary;
 
 public class FAQUtil {
 
@@ -117,14 +124,22 @@ public class FAQUtil {
 
 	}
 
-	public static void createFeatures() {
+	public static void createFeatures() throws JWNLException {
 
 		LOGGER.info("Starting creating bag of words");
-		
+
 		Properties props = new Properties();
 		props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		Morphology morphology = new Morphology();
+		Dictionary dictionary = null;
+		try {
+
+			dictionary = Dictionary.getDefaultResourceInstance();
+
+		} catch (JWNLException e) {
+			e.printStackTrace();
+		}
 		try {
 			List<QuesAnswer> list = getAllQuestion();
 
@@ -136,8 +151,6 @@ public class FAQUtil {
 
 				List<CoreMap> sentences = document.get(SentencesAnnotation.class);
 
-				// SemanticHeadFinder finder = new SemanticHeadFinder();
-
 				for (CoreMap sentence : sentences) {
 
 					Map<String, String> map = new HashMap<String, String>();
@@ -146,49 +159,103 @@ public class FAQUtil {
 					StringBuilder posBuilder = new StringBuilder();
 					StringBuilder lemmaBuilder = new StringBuilder();
 					StringBuilder stemBuilder = new StringBuilder();
+
+					Set<String> hypernymSet = new HashSet<String>();
+					Set<String> synonymSet = new HashSet<String>();
+					Set<String> hyponymSet = new HashSet<String>();
+
 					for (CoreLabel token : sentence.get(TokensAnnotation.class)) {
 						// this is the text of the token
 						String word = token.get(TextAnnotation.class);
 						// this is the POS tag of the token
 						String pos = token.get(PartOfSpeechAnnotation.class);
-						// this is the NER label of the token
-						String ne = token.get(NamedEntityTagAnnotation.class);
 
 						String lemma = token.lemma();
 
 						String stem = morphology.stem(word);
-						
+
 						lemmaBuilder.append(lemma).append(",");
 						posBuilder.append(pos).append(",");
 						stemBuilder.append(stem).append(",");
 
+						if (pos.equalsIgnoreCase("NN") || pos.equalsIgnoreCase("NNP")) {
+							IndexWord set = dictionary.lookupIndexWord(POS.NOUN, word);
+
+							if (set == null) {
+								continue;
+							}
+							List<Synset> synset = set.getSenses();
+
+							for (Synset syn : synset) {
+
+								if (PointerUtils.getSynonyms(syn).size() > 0) {
+									List<net.sf.extjwnl.data.Word> words = PointerUtils.getSynonyms(syn).get(0)
+											.getSynset().getWords();
+
+									for (net.sf.extjwnl.data.Word w : words) {
+										// synonymBuilder.append(w.getLemma()).append(",");
+										synonymSet.add(w.getLemma());
+									}
+								}
+
+								if (PointerUtils.getDirectHypernyms(syn).size() > 0) {
+									List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHypernyms(syn).get(0)
+											.getSynset().getWords();
+
+									for (net.sf.extjwnl.data.Word w : words) {
+										// hypernymBuilder.append(w.getLemma()).append(",");
+										hypernymSet.add(w.getLemma());
+									}
+								}
+
+								if (PointerUtils.getDirectHyponyms(syn).size() > 0) {
+									List<net.sf.extjwnl.data.Word> words = PointerUtils.getDirectHyponyms(syn).get(0)
+											.getSynset().getWords();
+
+									for (net.sf.extjwnl.data.Word w : words) {
+										// hyponymBuilder.append(w.getLemma()).append(",");
+										hyponymSet.add(w.getLemma());
+									}
+
+								}
+
+							}
+
+						}
+
 					}
+
+					// hyponymSet.to
 
 					posBuilder.setLength(posBuilder.length() - 1);
 					lemmaBuilder.setLength(lemmaBuilder.length() - 1);
-					stemBuilder.setLength(stemBuilder.length()-1);
+					stemBuilder.setLength(stemBuilder.length() - 1);
+					/*
+					 * hyponymBuilder.setLength(hyponymBuilder.length()-1);
+					 * hypernymBuilder.setLength(hypernymBuilder.length()-1);
+					 * synonymBuilder.setLength(synonymBuilder.length()-1);
+					 */
 					map.put("quesId", ques.getId());
 					map.put("pos", posBuilder.toString());
 					map.put("lemma", lemmaBuilder.toString());
 					map.put("stem", stemBuilder.toString());
-					// this is the parse tree of the current sentence
+
+					map.put("hypernym", hypernymSet.toString());
+					map.put("synonym", synonymSet.toString());
+					map.put("hyponym", hyponymSet.toString());
 
 					Tree tree = sentence.get(TreeAnnotation.class);
-					// System.out.println("parse tree:\n" + tree.toString());
 
 					map.put("parseTree", tree.toString());
-
-					// System.out.println("head" + finder.determineHead(tree));
 
 					// this is the Stanford dependency graph of the current sentence
 					SemanticGraph dependencies = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
 					map.put("dependencyGraph", dependencies.toString());
-					// System.out.println("dependency graph:\n" + dependencies.toString());
 
 					elasticSearchUtil.indexValue("feature", "doc", map);
-					
+
 				}
-				
+
 				LOGGER.info("Feature for " + ques.getId() + " question created");
 
 			}
@@ -196,7 +263,6 @@ public class FAQUtil {
 			LOGGER.error(e.getMessage());
 		}
 
-		
 		LOGGER.info("features created");
 	}
 
