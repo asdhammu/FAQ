@@ -136,7 +136,7 @@ public class FAQUtil {
 
 	public static void createFeatures() throws JWNLException {
 
-		LOGGER.info("Starting creating bag of words");
+		LOGGER.info("Starting creating features");
 
 		Properties props = new Properties();
 		props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
@@ -189,9 +189,11 @@ public class FAQUtil {
 					map.put("lemma", lemmaBuilder.toString());
 					map.put("stem", stemBuilder.toString());
 
-					map.put("hypernym", hypernymSet.toString());
-					map.put("synonym", synonymSet.toString());
-					map.put("hyponym", hyponymSet.toString());
+					
+					
+					map.put("hypernym", convertToString(hypernymSet));
+					map.put("synonym", convertToString(synonymSet));
+					map.put("hyponym", convertToString(hyponymSet));
 					map.put("excludeStop", exclueStopWords.toString());
 					Tree tree = sentence.get(TreeAnnotation.class);
 
@@ -215,6 +217,21 @@ public class FAQUtil {
 		LOGGER.info("features created");
 	}
 
+	
+	public static String convertToString(Set<String> set) {
+		
+		StringBuilder builder = new StringBuilder();
+		
+		for(String s:set) {
+			builder.append(s).append(",");
+		}
+		if(builder.length()>1) {
+			builder.setLength(builder.length()-1);
+		}
+		
+		return builder.toString();
+				
+	}
 	
 	public static void extractFeatures(Morphology morphology, Dictionary dictionary, Set<String> stopWords,
 			CoreMap sentence, StringBuilder posBuilder, StringBuilder lemmaBuilder, StringBuilder stemBuilder,
@@ -253,7 +270,6 @@ public class FAQUtil {
 								.getSynset().getWords();
 
 						for (net.sf.extjwnl.data.Word w : words) {
-							// synonymBuilder.append(w.getLemma()).append(",");
 							synonymSet.add(w.getLemma());
 						}
 					}
@@ -263,7 +279,6 @@ public class FAQUtil {
 								.getSynset().getWords();
 
 						for (net.sf.extjwnl.data.Word w : words) {
-							// hypernymBuilder.append(w.getLemma()).append(",");
 							hypernymSet.add(w.getLemma());
 						}
 					}
@@ -273,7 +288,6 @@ public class FAQUtil {
 								.getSynset().getWords();
 
 						for (net.sf.extjwnl.data.Word w : words) {
-							// hyponymBuilder.append(w.getLemma()).append(",");
 							hyponymSet.add(w.getLemma());
 						}
 

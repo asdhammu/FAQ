@@ -34,10 +34,10 @@ public class InitialLoader {
 		
 		try {
 			
-			searchUtil.createIndex("quesans", mapping);			
+			/*searchUtil.createIndex("quesans", mapping);			
 			searchUtil.addAllQuestions();		
 			
-			FAQUtil.createBagOfWords();
+			FAQUtil.createBagOfWords();*/
 			
 			FAQUtil.createFeatures();
 			

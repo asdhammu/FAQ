@@ -50,27 +50,14 @@ public class Callable {
 			if(query.equalsIgnoreCase("exit")) {
 				break;
 			}			
-			/*BagOfWords bagOfWords = new BagOfWords();
 			
-			PriorityQueue<QuesAnswer> list = bagOfWords.getTopTenQuestions(query);
-			int i=0;
-			while (list.peek() != null) {
-
-				if(i>10) {
-					break;
-				}
-				QuesAnswer peek = list.peek();
-				
-				System.out.println(peek.getQues() + " " + peek.getCount());
-
-				list.remove();
-				i++;
-			}*/
+			
+			BagOfWords bagOfWords = new BagOfWords();
 			
 			ClassifierAlogrithm algorithm = new ClassifierAlogrithm();
 			
 			//algorithm.getTopTenQuestions(query, pipeline, morphology, dictionary, stopWords);
-			
+			//PriorityQueue<QuesAnswer> list = bagOfWords.getTopTenQuestions(query);
 			PriorityQueue<QuesAnswer> list = algorithm.getTopTenQuestions(query, pipeline, morphology, dictionary, stopWords);
 			int i=0;
 			while (list.peek() != null) {

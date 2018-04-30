@@ -17,6 +17,8 @@ import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.process.Morphology;
+import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
 import edu.utdallas.factory.ElasticSearchFactory;
 import edu.utdallas.model.QuesAnswer;
@@ -59,16 +61,27 @@ public class ClassifierAlogrithm {
 		Set<String> hyponymSet = new HashSet<String>();
 		
 		try {
+			
+			
+			
 			Annotation document = new Annotation(query);			
 			pipeline.annotate(document);
 
 			
 			List<CoreMap> sentences = document.get(SentencesAnnotation.class);
-
+			Tree tree = null;
 			for(CoreMap sentence: sentences) {
 				
-				FAQUtil.extractFeatures(morphology, dictionary, stopWords, sentence, posBuilder, lemmaBuilder, stemBuilder, exclueStopWords, hypernymSet, synonymSet, hyponymSet);				
+				FAQUtil.extractFeatures(morphology, dictionary, stopWords, sentence, posBuilder, lemmaBuilder, stemBuilder, exclueStopWords, hypernymSet, synonymSet, hyponymSet);
+				
+				tree = sentence.get(TreeAnnotation.class);
 			}
+			
+			
+			
+			String[] queryHypernym = FAQUtil.convertToString(hypernymSet).split(",");
+			String[] queryHyponym = FAQUtil.convertToString(hyponymSet).split(",");
+			String[] querySynonym = FAQUtil.convertToString(synonymSet).split(",");
 			
 			SearchHit[] hits = FAQUtil.getFeatures();
 			Map<String, Integer> countMap = new HashMap<String, Integer>();
@@ -78,15 +91,40 @@ public class ClassifierAlogrithm {
 				Set<String> posSet = new HashSet<String>();
 				String[] pos = ((String) map.get("pos")).split(",");
 				String quesId = (String) map.get("quesId");
+				String[] hypernym = ((String) map.get("hypernym")).split(",");
+				String[] hyponym = ((String) map.get("hyponym")).split(",");
+				
+				Tree tree1 = Tree.valueOf((String)map.get("parseTree"));
+				
+				
+				
 				for(String s: pos) {
 					posSet.add(s);
 				}
 				
 				String[] queryPos = posBuilder.toString().split(",");
-				
+				// matching pos tags
 				for(String q: queryPos) {
 					if(posSet.contains(q)) {
 						count++;
+					}
+				}
+				
+				// matching hypernyms
+				/*for(String hyp: hypernym) {
+					for(String q : queryHypernym) {
+						if(hyp.equals(q)) {
+							count++;
+						}
+					}
+				}*/
+				
+				// matching hypo
+				for(String hyp: hyponym) {
+					for(String q : queryHypernym) {
+						if(hyp.equals(q)) {
+							count++;
+						}
 					}
 				}
 				
