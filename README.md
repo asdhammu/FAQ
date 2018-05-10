@@ -1,5 +1,8 @@
 # FAQ
-NLP project Frequently asked questions for Coinbase
+NLP project Frequently asked questions for Coinbase.
+We implement two alogrithm to get the top 10 results which match the user query.
+1. Bag of words matching
+2. Hueristics based matching using features extracted from the corpus. i.e. POS tag, hypernyms, hyponyms, synonyms, dependecy graphs
 
 
 # Pre requisites
